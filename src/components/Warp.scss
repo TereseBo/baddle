@@ -1,0 +1,17 @@
+.Warp{
+    display: flex;
+    flex-direction: column;
+    
+    .slits{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+    }
+    .holes{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        
+    }
+}
