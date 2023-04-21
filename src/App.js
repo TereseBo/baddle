@@ -21,6 +21,7 @@ function App() {
         </header>
         <Routes>
           <Route path='/draft' element={<Banddraft />} />
+          <Route path='/' element={<Banddraft />} />
         </Routes>
       </BrowserRouter>
     </WarpProvider>
