@@ -1,5 +1,7 @@
+@use "../style/variables.sass" as v;
+
 .Thread{
-    width: 1rem;
-    height: 1rem;
+    width: v.$threadspace;
+    height: v.$threadspace;
     border: 1px solid purple;
 }
