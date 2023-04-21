@@ -1,10 +1,7 @@
 import Warp from "../components/Warp"
-import { useState, useContext } from "react"
+import { useContext } from "react"
 import Weave from "../components/Weave"
 import "./Banddraft.scss"
-import Nrinput from "../components/Nrinput"
-
-import fillStateArr from "../functions/fillStateArr"
 import { WarpContext } from "../contexts/warpContext"
 
 export default function Banddraft() {
