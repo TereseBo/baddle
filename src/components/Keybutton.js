@@ -1,7 +1,7 @@
 import "./Keybutton.scss"
 
-export default function Keybutton({onClick, text}){
+export default function Keybutton({onClick, text, active}){
     return(
-        <button className="Keybutton" onClick={onClick}>{text}</button>
+        active?( <button className="Active Keybutton" onClick={onClick}>{text}</button>):( <button className="Keybutton" onClick={onClick}>{text}</button>)
     )
 }
