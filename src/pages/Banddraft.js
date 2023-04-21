@@ -1,17 +1,21 @@
 import Warp from "../components/Warp"
-import { useState } from "react"
+import { useState, useContext } from "react"
 import Weave from "../components/Weave"
 import "./Banddraft.scss"
+import Nrinput from "../components/Nrinput"
+
+import fillStateArr from "../functions/fillStateArr"
+import { WarpContext } from "../contexts/warpContext"
 
 export default function Banddraft() {
-
-    const [test, setTest] = useState(['', '', '', '', '', '', '', '', '', ''])
+    const {warp, setWarp}=useContext(WarpContext)
 
     return (
         <div className="Banddraft">
+
             <p>Band draft</p>
-            <Weave slits={test} holes={test} length={50}/>
-            <Warp slits={test} holes={test}/>
+            <Weave/>
+            <Warp />
         </div>
     )
 }
