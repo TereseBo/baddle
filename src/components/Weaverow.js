@@ -5,9 +5,9 @@ import "./Weaverow.scss"
 export default function Weaverow({ pattern, rowNr}) {
 
     return (
-        <div className="Weaverow">
+        <div key={`row-${rowNr}-container`} className="Weaverow">
             {pattern.map((cell1, index )=>
-                (<div><Thread key={`slit-${index}`}/> </div>))}
+                (<div key={`row-${rowNr}slit-${index}`}><Thread /> </div>))}
                 <Heddlemove rowNr={rowNr}/>
 
         </div >
