@@ -5,15 +5,32 @@ import Warp from "./Warp"
 import Heddlemove from "./Heddlemove"
 import { useContext, useState } from "react";
 import {WarpContext} from '../contexts/warpContext'
-
+import { useEffect } from "react"
 
 export default function Weave() {
-    const {warp, setWarp, threads, draftheight}=useContext(WarpContext)
-    const [weave, setWeave]=useState(new Array(draftheight).fill(new Array(threads/2).fill('',0,threads/2),0,draftheight))
+    const { weave, warp, threads, draftheight}=useContext(WarpContext)
+    const [newweave, setNewweave]=useState(new Array(draftheight).fill(new Array(threads/2).fill('',0,threads/2),0,draftheight))
+    
+    useEffect(()=>{
+    const wc=newweave.map((item, index)=>{
+        console.log(item)
+        if(index%2==1){
+            console.log(warp)
+            return item= warp[1]
+        }else{
+           return item=warp[0]
+        }})   
+        setNewweave(wc)  
+        console.log(wc)
+        console.log(newweave)
+    },[warp])
+
+    
+    
 
     return (
         <div className="Weave">
-            {weave.map((row, index)=>
+            {newweave.map((row, index)=>
             (<Weaverow pattern={row} rowNr={index} key={"weaverow"+index}/>))}
 
 
