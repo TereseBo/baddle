@@ -1,9 +1,18 @@
+@use "../style/variables.sass" as v;
+
 .Keybutton{
-    height: 1rem;
-    width: 1rem;
+    width: v.$threadspace;
+    height: v.$threadspace;
     margin:0;
-    box-sizing: border-box;
+    padding: 0;
+    box-sizing: content-box;
+    text-align: center;
+    line-height: 100%;
+    border: 1px solid black;
+    display: block;
+font-size: calc(v.$threadspace *0.7);
 }
 .Active{
-    background-color: aquamarine;
+    background-color: chartreuse;
+    
 }

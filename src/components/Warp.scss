@@ -1,17 +1,37 @@
+@use "../style/variables.sass" as v;
 .Warp{
-    display: flex;
-    flex-direction: column;
+
     
     .slits{
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
+        margin-left: calc(v.$threadspace*0.5);
+        .Thread{
+            width: calc(v.$threadspace*0.3);
+            height: calc(v.$threadspace*2) ;
+            margin-left: calc(v.$threadspace*0.35) ;
+            margin-right: calc(v.$threadspace*0.35) ;
+
+        }
 
     }
     .holes{
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
+
+        .Thread{
+            border-radius: 50%;
+            width: calc(v.$threadspace*0.7);
+            height: calc(v.$threadspace*0.7);
+
+
+
+            margin-left: calc(v.$threadspace*0.15) ;
+            margin-right: calc(v.$threadspace*0.15) ;
+
+        }
         
     }
 }

@@ -3,5 +3,6 @@
 .Banddraft{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: v.$threadspace
 }
