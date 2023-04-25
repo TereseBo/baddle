@@ -1,4 +1,4 @@
-import { useContext, useState } from "react"
+import { useContext } from "react"
 import { ColorContext } from '../contexts/colorContext'
 
 export default function Colorpicker({ name }) {
@@ -6,7 +6,6 @@ export default function Colorpicker({ name }) {
 
     function updateCurrentColor(e) {
         setCurrentColor(e.target.value)
-        console.log(currentColor)
     }
     return (
         <form >

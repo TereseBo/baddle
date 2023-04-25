@@ -1,14 +1,11 @@
-import Thread from "./Thread"
 import Weaverow from "./Weaverow"
 import "./Weave.scss"
-import Warp from "./Warp"
-import Heddlemove from "./Heddlemove"
 import { useContext, useState } from "react";
 import {WarpContext} from '../contexts/warpContext'
 import { useEffect } from "react"
 
 export default function Weave() {
-    const { weave, warp, threads, draftheight}=useContext(WarpContext)
+    const { warp, threads, draftheight}=useContext(WarpContext)
     const [newweave, setNewweave]=useState(new Array(draftheight).fill(new Array(threads/2).fill('',0,threads/2),0,draftheight))
     
     useEffect(()=>{
@@ -24,10 +21,6 @@ export default function Weave() {
         console.log(wc)
         console.log(newweave)
     },[warp])
-
-    
-    
-
     return (
         <div className="Weave">
             {newweave.map((row, index)=>

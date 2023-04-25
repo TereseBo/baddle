@@ -3,12 +3,6 @@ import "./Warp.scss"
 import { useContext, useState } from "react";
 import { WarpContext } from '../contexts/warpContext'
 import {ColorContext} from '../contexts/colorContext'
-
-//Context
-import { ColorProvider } from '../contexts/colorContext';
-
-
-
 //TODO:Add displaybox of colors in warp
 
 export default function Warp() {

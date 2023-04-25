@@ -9,10 +9,9 @@ export default function Banddraft() {
 
     return (
         <div className="Banddraft">
-
-            <p>Band draft</p>
-            <Weave/>
+            <p>Select your warpcolor and click to set</p>
             <Warp />
+            <Weave/>
         </div>
     )
 }
