@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
 //components
@@ -16,6 +16,7 @@ function App() {
     <WarpProvider>
       <ColorProvider>
         <BrowserRouter>
+        <div className='App'>
           <header className="App-header">
             <Preferences />
             <Link to="/">Start</Link>
@@ -25,6 +26,7 @@ function App() {
             <Route path='/draft' element={<Banddraft />} />
             <Route path='/' element={<Banddraft />} />
           </Routes>
+          </div>
         </BrowserRouter>
       </ColorProvider>
     </WarpProvider>
