@@ -18,7 +18,6 @@ function App() {
         <BrowserRouter>
         <div className='App'>
           <header className="App-header">
-            <Preferences />
             <Link to="/">Start</Link>
             <Link to="/draft">Draft</Link>
           </header>

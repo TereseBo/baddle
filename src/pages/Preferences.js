@@ -12,6 +12,8 @@ export default function Preferences() {
             <Nrinput value={draftheight} label="rows in draft" submit={setDraftheight} />
             <Nrinput value={threads} label="Warpthreads"submit={setThreads} />
             <Colorpicker name="warp color"/>
+            <p>Select your warpcolor and click to set</p>
+
         </div>
     )
 }
