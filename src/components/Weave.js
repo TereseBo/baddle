@@ -18,8 +18,6 @@ export default function Weave() {
            return item=warp[0]
         }})   
         setNewweave(wc)  
-        console.log(wc)
-        console.log(newweave)
     },[warp])
     return (
         <div className="Weave">
