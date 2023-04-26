@@ -1,14 +1,26 @@
 import Heddlemove from "./Heddlemove"
 import Thread from "./Thread"
 import "./Weaverow.scss"
+import { useContext, useState } from "react";
+import {WarpContext} from '../contexts/warpContext'
+
+
 
 export default function Weaverow({ pattern, rowNr}) {
+    const { warp, threads, draftheight}=useContext(WarpContext)
+    const [tracker2, setTracker2]=useState(rowNr%2)
+
+    function setClass(match){
+        let lols=''
+        tracker2? lols='Weaverow holes': lols='Weaverow slits'
+        return lols
+    }
 
     return (
-        <div key={`row-${rowNr}-container`} className="Weaverow">
+        <div key={`row-${rowNr}-container`} className={setClass(tracker2)}>
             {pattern.map((cell1, index )=>
-                (<Thread color={cell1} key={`row-${rowNr}slit-${index}`} />))}
-                <Heddlemove rowNr={rowNr}zRow={rowNr%2}/>
+                (<Thread color={cell1} key={`row-${rowNr}thread-${index}`} />))}
+                <Heddlemove rowNr={rowNr}zRow={tracker2} setTracker2={setTracker2}/>
 
         </div >
     )
