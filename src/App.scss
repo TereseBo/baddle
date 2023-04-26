@@ -1,6 +1,15 @@
+@use './style/variables.scss' as v;
+@use './style/mixins.scss' as m;
+
 .App {
-width: fit-content;
-margin: auto;
+    .App-header{
+
+        a{
+@include m.button-link;
+        }
+
+    }
+
 }
 
 

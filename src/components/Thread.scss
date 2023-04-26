@@ -1,7 +1,4 @@
-@use "../style/variables.scss" as v;
-
+@use "../style//mixins.scss" as m;
 .Thread{
-    width: v.$threadspace;
-    height: calc( v.$threadspace*1.5);
-    border: 1px solid purple;
+ @include m.base-thread;
 }

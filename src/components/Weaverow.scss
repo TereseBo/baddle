@@ -1,8 +1,24 @@
-.Weaverow{
-background-color: aqua;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        align-content: center;
+@use "../style/variables.scss" as v;
 
+
+.Weaverow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+
+    &.holes{
+        margin-left: v.$indentation;
+        .Heddlemove{
+            margin-left: v.$indentation;
+        }
     }
+    &.slits{
+        .Heddlemove{
+            margin-left: calc( v.$indentation * 2 );
+        }
+    }
+
+
+
+}

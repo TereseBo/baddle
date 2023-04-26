@@ -1,18 +1,19 @@
 @use "../style/variables.scss" as v;
+@use "../style//mixins.scss" as m;
 
-.Keybutton{
-    width: v.$threadspace;
-    height: v.$threadspace;
-    margin:0;
+
+.Keybutton {
+
+    @include m.base-thread;
+    margin: 0;
     padding: 0;
     box-sizing: content-box;
     text-align: center;
     line-height: 100%;
-    border: 1px solid black;
-    display: block;
-font-size: calc(v.$threadspace *0.7);
+    font-size: calc(v.$threadspace * 0.9);
 }
-.Active{
+
+.Active {
     background-color: chartreuse;
-    
+
 }

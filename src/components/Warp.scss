@@ -1,23 +1,29 @@
 @use "../style/variables.scss" as v;
 .Warp{
+    background-color: rgb(254, 254, 254);
+    padding: 2rem 1rem 1rem 1rem;
+    margin-left: calc(v.$base-space * -1 + 1rem);
+    border-radius: 50px 50px 20px 20px;
 
-    $holes:calc(v.$threadspace*0.7);
-    $holesmarg:calc((v.$threadspace - $holes ) /2);
-
-    $slits:calc(v.$threadspace*0.3);
+    $slits:calc(v.$threadspace*0.30);
     $slitsmarg:calc((v.$threadspace - $slits ) /2);
+
+    $holes:calc($slitsmarg * 2);
+    $holesmarg:calc((v.$threadspace - $holes ) /2);
     .slits{
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
-        margin-left: calc(v.$threadspace*0.5 - $holesmarg);
+        box-sizing: border-box;
+        
+        
  
         .Thread{
             width: $slits;
             height: calc(v.$threadspace*2) ;
             margin-left: $slitsmarg ;
             margin-right: $slitsmarg ;
-
+            background-color: v.$weave-base-color;
         }
 
     }
@@ -25,22 +31,18 @@
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
-
+        margin-left: 0.55rem;
+        box-sizing: border-box;
 
         .Thread{
             border-radius: 50%;
             width: $holes;
             height: $holes;
 
-
-
             margin-left: $holesmarg ;
             margin-right: $holesmarg ;
-            &:first-child{
-                margin-left: 0;
-                background-color: black;
-            
-            }
+            background-color: v.$weave-base-color;
+
 
         }
         

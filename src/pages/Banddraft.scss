@@ -3,6 +3,12 @@
 .Banddraft{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: v.$threadspace
+   align-items: flex-start;
+    gap: v.$threadspace;
+
+    width: fit-content;
+margin: auto;
+padding: v.$base-space;
+background-color: v.$weave-base-color;
+border-radius: 12px;
 }
