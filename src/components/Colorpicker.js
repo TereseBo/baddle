@@ -1,4 +1,6 @@
+//dependencies
 import { useContext } from "react"
+//contexts
 import { ColorContext } from '../contexts/colorContext'
 
 export default function Colorpicker({ name }) {

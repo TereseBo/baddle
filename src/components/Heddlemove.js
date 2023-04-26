@@ -1,7 +1,11 @@
-import Keybutton from "./Keybutton";
 import { useContext, useState } from "react";
+//contexts
 import { WarpContext } from '../contexts/warpContext'
+//components
+import Keybutton from "./Keybutton";
+//style
 import './Heddlemove.scss'
+
 export default function ({ zRow, rowNr, setTracker2 }) {
     const [tracker, setTracker] = useState(zRow)
 

@@ -1,8 +1,12 @@
-import Weaverow from "./Weaverow"
-import "./Weave.scss"
-import { useContext, useState } from "react";
+
+//dependencies
+import { useContext, useState, useEffect } from "react";
+//context
 import {WarpContext} from '../contexts/warpContext'
-import { useEffect } from "react"
+//components
+import Weaverow from "./Weaverow"
+//style
+import "./Weave.scss"
 
 export default function Weave() {
     const { warp, threads, draftheight}=useContext(WarpContext)

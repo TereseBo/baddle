@@ -1,8 +1,14 @@
-import Thread from "./Thread"
-import "./Warp.scss"
+
+//dependencies
 import { useContext, useState } from "react";
+//contexts
 import { WarpContext } from '../contexts/warpContext'
 import {ColorContext} from '../contexts/colorContext'
+//components
+import Thread from "./Thread"
+//style
+import "./Warp.scss"
+
 //TODO:Add displaybox of colors in warp
 
 export default function Warp() {

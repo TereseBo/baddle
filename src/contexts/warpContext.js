@@ -1,7 +1,8 @@
+//dependencies
 import { createContext, useState } from "react";
 
+//exports
 export const WarpContext=createContext()
-
 export function WarpProvider({children}){
     const [threads, setThreads]=useState(38)
     const [draftheight, setDraftheight]=useState(50)

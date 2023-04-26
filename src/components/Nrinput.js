@@ -1,3 +1,4 @@
+//dependencies
 import {useState} from 'react';
 
 export default function Nrinput({ label, value, submit}) {

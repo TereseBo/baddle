@@ -1,3 +1,4 @@
+//components
 import "./Keybutton.scss"
 
 export default function Keybutton({onClick, text, active}){
