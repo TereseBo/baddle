@@ -1,17 +1,22 @@
-@use "../style/variables.sass" as v;
+@use "../style/variables.scss" as v;
 .Warp{
 
-    
+    $holes:calc(v.$threadspace*0.7);
+    $holesmarg:calc((v.$threadspace - $holes ) /2);
+
+    $slits:calc(v.$threadspace*0.3);
+    $slitsmarg:calc((v.$threadspace - $slits ) /2);
     .slits{
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
-        margin-left: calc(v.$threadspace*0.5);
+        margin-left: calc(v.$threadspace*0.5 - $holesmarg);
+ 
         .Thread{
-            width: calc(v.$threadspace*0.3);
+            width: $slits;
             height: calc(v.$threadspace*2) ;
-            margin-left: calc(v.$threadspace*0.35) ;
-            margin-right: calc(v.$threadspace*0.35) ;
+            margin-left: $slitsmarg ;
+            margin-right: $slitsmarg ;
 
         }
 
@@ -21,15 +26,21 @@
         flex-direction: row;
         flex-wrap: nowrap;
 
+
         .Thread{
             border-radius: 50%;
-            width: calc(v.$threadspace*0.7);
-            height: calc(v.$threadspace*0.7);
+            width: $holes;
+            height: $holes;
 
 
 
-            margin-left: calc(v.$threadspace*0.15) ;
-            margin-right: calc(v.$threadspace*0.15) ;
+            margin-left: $holesmarg ;
+            margin-right: $holesmarg ;
+            &:first-child{
+                margin-left: 0;
+                background-color: black;
+            
+            }
 
         }
         
