@@ -1,14 +1,14 @@
 @use "../style/variables.scss" as v;
 
-.Banddraft{
+.Banddraft {
     display: flex;
     flex-direction: column;
-   align-items: flex-start;
+    align-items: flex-start;
     gap: v.$threadspace;
 
     width: fit-content;
-margin: auto;
-padding: v.$base-space;
-background-color: v.$weave-base-color;
-border-radius: 12px;
+    margin: auto;
+    padding: v.$base-space;
+    background-color: v.$weave-base-color;
+    border-radius: 12px;
 }

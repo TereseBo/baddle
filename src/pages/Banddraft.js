@@ -6,6 +6,7 @@ import { WarpContext } from "../contexts/warpContext"
 import Weave from "../components/Weave"
 import Preferences from "./Preferences"
 import Warp from "../components/Warp"
+import Colorlist from "../components/Colorlist"
 //style
 import "./Banddraft.scss"
 
