@@ -21,6 +21,8 @@ function App() {
           <Routes>
             <Route path='/draft' element={<Banddraft />} />
             <Route path='/' element={<Banddraft />} />
+            <Route path='/baddle' element={<Banddraft />} />
+
           </Routes>
           </div>
         </BrowserRouter>
