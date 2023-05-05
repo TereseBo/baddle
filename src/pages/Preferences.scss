@@ -1,6 +1,16 @@
+@use "../style/mixins.scss" as m;
 .Preferences{
-
-
+    @include m.rounded-corners;
+    //margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap:0.5rem;
+    background-color: aqua;
+    padding: 1rem;
 
 
 }
+
+
+
+

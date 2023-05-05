@@ -2,7 +2,6 @@
 .Warp{
     background-color: rgb(254, 254, 254);
     padding: 2rem 1rem 1rem 1rem;
-    margin-left: calc(v.$base-space * -1 + 1rem);
     border-radius: 50px 50px 20px 20px;
 
     $slits:calc(v.$threadspace*0.30);
