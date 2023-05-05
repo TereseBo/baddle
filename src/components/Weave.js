@@ -22,7 +22,7 @@ export default function Weave() {
            return item=warp[0]
         }})   
         setNewweave(wc)  
-    },[warp])
+    },[warp, newweave])
     return (
         <div className="Weave">
             {newweave.map((row, index)=>
