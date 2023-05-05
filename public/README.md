@@ -10,13 +10,13 @@ Clone the project and run
 Navigate to localhost 3000 to see your page.
 
 ###### Features included:
-1. Warp visualisation
-    1. Heddle with alternating slots and dents
-    2. Adjustable nr of threads (not yet implemented)
-    3. List of colors in the warp (not yet implemented)
-    4. List of warporder (not yet implemented)
-2. Weave visualisation
-    1. Weave pattern generated from the current warp settings
-    2. Adjustable nr of beats (not yet implemented)
-    3. Visualisation of the heddle movements
-    4. Possibility to change heddlemovement (not yet implemented)
+- Warp visualisation
+    - Heddle with alternating slots and dents
+    - Adjustable nr of threads (not yet implemented)
+    - List of colors in the warp (not yet implemented)
+    - List of warporder (not yet implemented)
+- Weave visualisation
+    - Weave pattern generated from the current warp settings
+    - Adjustable nr of beats (not yet implemented)
+    - Visualisation of the heddle movements
+    - Possibility to change heddlemovement (not yet implemented)
