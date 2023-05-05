@@ -3,11 +3,13 @@ This webpage lets you create drafts for warp faced bands using a heddle.
 
 ##### To get started
 Clone the project and run 
-`npm i`
-`npm start`
+
+1. `npm i`
+2. `npm start`
+
 Navigate to localhost 3000 to see your page.
 
-###### The features included:
+###### Features included:
 1. Warp visualisation
     1. Heddle with alternating slots and dents
     2. Adjustable nr of threads (not yet implemented)
