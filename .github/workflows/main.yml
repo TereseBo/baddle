@@ -12,7 +12,7 @@ jobs:
     if: github.event.pull_request.merged == true
     runs-on: macos-latest
     steps:
-      - run: npm -i
+      - run: npm -install
       - run: npm run deploy
       - run: echo PR ${{ github.event.number }} has been merged
   closed_PR:
