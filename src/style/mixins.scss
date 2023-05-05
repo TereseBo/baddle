@@ -64,3 +64,11 @@
 @mixin rounded-corners{
     border-radius: 12px;
 }
+
+@mixin text-box{
+    background-color: v.$box-color;
+    @include rounded-corners;
+    font-size: v.$threadspace;
+
+
+}
