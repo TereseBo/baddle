@@ -7,7 +7,7 @@ import Keybutton from "./Keybutton";
 import './Heddlemove.scss'
 
 export default function Heddlemove({ zRow, rowNr, setTracker2 }) {
-    const { warp, setWarp } = useContext(WarpContext)
+    //const { warp, setWarp } = useContext(WarpContext)
     function clickHandler() {
         console.log("click!")
 
