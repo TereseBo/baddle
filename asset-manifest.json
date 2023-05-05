@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/baddle/static/css/main.b45bf9b9.css",
+    "main.js": "/baddle/static/js/main.109930e1.js",
+    "static/js/787.96cdd3e4.chunk.js": "/baddle/static/js/787.96cdd3e4.chunk.js",
+    "index.html": "/baddle/index.html",
+    "main.b45bf9b9.css.map": "/baddle/static/css/main.b45bf9b9.css.map",
+    "main.109930e1.js.map": "/baddle/static/js/main.109930e1.js.map",
+    "787.96cdd3e4.chunk.js.map": "/baddle/static/js/787.96cdd3e4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b45bf9b9.css",
+    "static/js/main.109930e1.js"
+  ]
+}
