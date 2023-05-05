@@ -1,0 +1,22 @@
+name: Main protecter
+
+on:
+
+  pull_request:
+    types: [closed]
+    branches:
+      - main
+
+jobs:
+  Update-gh-pages:
+    if: github.event.pull_request.merged == true
+    runs-on: macos-latest
+    steps:
+      - run: npm -i
+      - run: npm run deploy
+      - run: echo PR ${{ github.event.number }} has been merged
+  closed_PR:
+    if: github.event.pull_request.merged == false
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo "PR ${{ github.event.number }} has been closed without being merged"
