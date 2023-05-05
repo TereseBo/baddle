@@ -9,6 +9,7 @@
     gap: v.$base-space;
 
     .draft{
+        background-color: v.$weave-base-color;
     @include m.rounded-corners;
     display: flex;
     flex-direction: column;
