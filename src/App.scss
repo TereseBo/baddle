@@ -2,14 +2,21 @@
 @use './style/mixins.scss' as m;
 
 .App {
-    .App-header{
+    padding-top: calc(v.$base-space * 0.5);
+   display: flex;
+   flex-direction: column;
+   gap: calc(v.$base-space * 0.5);
+    .App-header {
+        display: flex;
+        gap:v.$base-space;
+        justify-content: center;
+       // margin-bottom: v.$base-space;
 
-        a{
-@include m.button-link;
+        a {
+            background-color: aquamarine;
+            @include m.button-link;
         }
 
     }
 
 }
-
-

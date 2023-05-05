@@ -1,0 +1,5 @@
+@use '../style/mixins.scss' as m;
+
+.Colorpicker{
+    @include m.form-section;
+}

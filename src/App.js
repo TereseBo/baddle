@@ -1,15 +1,12 @@
-import logo from './logo.svg';
-import './App.scss';
+//dependencies
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-
-//components
-import Banddraft from './pages/Banddraft';
-import Preferences from './pages/Preferences';
-
-//context
+//contexts
 import { WarpProvider } from './contexts/warpContext';
 import { ColorProvider } from './contexts/colorContext';
-
+//components
+import Banddraft from './pages/Banddraft';
+//style
+import './App.scss';
 function App() {
   return (
 
@@ -24,6 +21,8 @@ function App() {
           <Routes>
             <Route path='/draft' element={<Banddraft />} />
             <Route path='/' element={<Banddraft />} />
+            <Route path='/baddle' element={<Banddraft />} />
+
           </Routes>
           </div>
         </BrowserRouter>

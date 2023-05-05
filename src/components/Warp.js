@@ -1,6 +1,6 @@
 
 //dependencies
-import { useContext, useState } from "react";
+import { useContext } from "react";
 //contexts
 import { WarpContext } from '../contexts/warpContext'
 import {ColorContext} from '../contexts/colorContext'

@@ -1,0 +1,4 @@
+@use '../style/mixins.scss' as m;
+.Nrinput{
+    @include m.form-section;
+}

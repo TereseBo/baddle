@@ -15,7 +15,7 @@ export default function Weave() {
     useEffect(()=>{
     const wc=newweave.map((item, index)=>{
         console.log(item)
-        if(index%2==1){
+        if(index%2===1){
             return item= warp[1]
         }else{
            return item=warp[0]
