@@ -3,24 +3,17 @@ name: Main protecter
 on:
 
   pull_request:
-    types: [closed]
+    types: [opened]
     branches:
       - main
 
 jobs:
-  Update-gh-pages:
-    if: github.event.pull_request.merged == true
+  run_tests:
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: "18.x"
-      - run: npm i
-      - run: npm run deploy
-      - run: echo PR ${{ github.event.number }} has been merged
-  closed_PR:
-    if: github.event.pull_request.merged == false
-    runs-on: ubuntu-latest
-    steps:
-    - run: echo "PR ${{ github.event.number }} has been closed without being merged"
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: "18.x"
+    - run: npm i
+    - run: npm run test

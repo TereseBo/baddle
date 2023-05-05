@@ -16,13 +16,12 @@ export default function Weave() {
     const wc=newweave.map((item, index)=>{
         console.log(item)
         if(index%2===1){
-            console.log(warp)
             return item= warp[1]
         }else{
            return item=warp[0]
         }})   
         setNewweave(wc)  
-    },[warp, newweave])
+    },[warp])
     return (
         <div className="Weave">
             {newweave.map((row, index)=>
