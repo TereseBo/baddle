@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 //contexts
 import { WarpContext } from '../contexts/warpContext'
 //components
@@ -6,19 +6,17 @@ import Keybutton from "./Keybutton";
 //style
 import './Heddlemove.scss'
 
-export default function ({ zRow, rowNr, setTracker2 }) {
-    const [tracker, setTracker] = useState(zRow)
-
+export default function Heddlemove({ zRow, rowNr, setTracker2 }) {
     const { warp, setWarp } = useContext(WarpContext)
     function clickHandler() {
 
         const weaveCopy = warp.map((item => item))
-        weaveCopy[rowNr] = warp[tracker]
+        weaveCopy[rowNr] = warp[zRow]
         setWarp(weaveCopy)
-        zRow==1? setTracker2(0):setTracker2(1)
+        zRow===1? setTracker2(0):setTracker2(1)
     }
         return (
-            tracker === 1 ? (<div className="Heddlemove"><Keybutton text="↑" /><Keybutton active={true} text="↓" /></div>) :
+            zRow === 1 ? (<div className="Heddlemove"><Keybutton text="↑" /><Keybutton active={true} text="↓" /></div>) :
                 (<div className="Heddlemove"><Keybutton active={true} text="↑" /><Keybutton text="↓" /></div>)
         )
 }

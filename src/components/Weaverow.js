@@ -1,7 +1,6 @@
 //dependencies
-import { useContext, useState } from "react";
+import {  useState } from "react";
 //contexts
-import {WarpContext} from '../contexts/warpContext'
 //components
 import Heddlemove from "./Heddlemove"
 import Thread from "./Thread"
@@ -9,7 +8,6 @@ import Thread from "./Thread"
 import "./Weaverow.scss"
 
 export default function Weaverow({ pattern, rowNr}) {
-    const { warp, threads, draftheight}=useContext(WarpContext)
     const [tracker2, setTracker2]=useState(rowNr%2)
 
     function setClass(match){
