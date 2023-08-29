@@ -20,6 +20,7 @@ export default function Warp() {
       const warpCopy= warp.map((item=>item))
       warpCopy[e.target.dataset.row][e.target.dataset.index]=currentColor
       setWarp(warpCopy)
+      console.log(warp[1])
     }
     return (
 
