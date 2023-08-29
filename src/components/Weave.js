@@ -15,7 +15,7 @@ export default function Weave() {
     return (
         <div className="Weave">
             {newweave.map((row, index)=>
-            (<Weaverow pattern={row} rowNr={index} key={"weaverow"+index} weave={newweave} setweave={setNewweave}/>))}
+            (<Weaverow pattern={row} rowNr={index} key={"weaverow"+index}/* weave={newweave} setweave={setNewweave}*//>))}
 
 
         </div>
