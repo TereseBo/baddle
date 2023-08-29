@@ -19,7 +19,7 @@ export default function Weaverow({ pattern, rowNr }) {
     const [holes, toggleHoles]=useToggle(!(rowNr%2))
 
     const [tracker2, setTracker2] = useState(rowNr % 2)
-    const [classSet, setClassSet] = useState(setClass())
+    //const [classSet, setClassSet] = useState(setClass())
 
     const { warp, newweave, setNewweave } = useContext(WarpContext)
     function arrayCompare(a, b) {
@@ -31,11 +31,11 @@ export default function Weaverow({ pattern, rowNr }) {
         
         if (!holes) {
             //setTracker2(0)
-            setClassSet('Weaverow slits')
+            //setClassSet('Weaverow slits')
             copy[rowNr] = warp[0]
         } else {
             //setTracker2(1)
-            setClassSet('Weaverow holes')
+           // setClassSet('Weaverow holes')
             copy[rowNr] = warp[1]
         }
 /*         if (tracker2 === 1) {
@@ -54,14 +54,14 @@ export default function Weaverow({ pattern, rowNr }) {
         setNewweave(copy)
     }
 
-    function setClass() {
+/*     function setClass() {
         let lols = ''
         holes ? lols = 'Weaverow holes' : lols = 'Weaverow slits'
         return lols
-    }
+    } */
 
     return (
-        <div key={`row-${rowNr}-container`} className={classSet}>
+        <div key={`row-${rowNr}-container`} className={!holes ? 'Weaverow holes' : 'Weaverow slits'}>
             {pattern.map((cell1, index) =>
                 (<Thread color={cell1} key={`row-${rowNr}thread-${index}`} />))}
             <Heddlemove rowNr={rowNr} zRow={/* tracker2 */holes} clickHandler={clickHandler} />
