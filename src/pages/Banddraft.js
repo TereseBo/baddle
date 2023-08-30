@@ -2,7 +2,7 @@
 //contexts
 //components
 import Weave from "../components/Weave"
-import Preferences from "./Preferences"
+import Preferences from "../components/Preferences"
 import Warp from "../components/Warp"
 import Colorlist from "../components/Colorlist"
 //style

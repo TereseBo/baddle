@@ -9,11 +9,11 @@ import Weaverow from "./Weaverow"
 import "./Weave.scss"
 
 export default function Weave() {
-    const { newweave}=useContext(WarpContext)
+    const { weaveArea}=useContext(WarpContext)
 
     return (
         <div className="Weave">
-            {newweave.map((row, index)=>
+            {weaveArea.map((row, index)=>
             (<Weaverow rowNr={index} key={"weaverow"+index}/>))}
         </div>
     )
