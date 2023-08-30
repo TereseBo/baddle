@@ -34,7 +34,5 @@ export default function Warp() {
                         (<Thread key={`hole-${index}`} onClick={setBackgroundColor} row={1} index={index} color={cell2}/>))}
                 </div>
             </div >
-  
     )
-
 }
