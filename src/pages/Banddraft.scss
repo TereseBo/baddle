@@ -16,23 +16,20 @@
         flex-direction: column;
         align-items: flex-start;
         gap: v.$threadspace;
-
         width: fit-content;
         padding-top: v.$base-space;
+        padding-bottom: v.$base-space;
         padding-right: v.$base-space;
         padding-left: calc(v.$base-space + (v.$threadspace * 2));
 
         .Warp {
             margin-left: calc(v.$base-space * -1 + 1rem);
-
         }
 
         .Preferences {
             margin-left: calc(v.$base-space * -1 + 1rem);
             box-sizing: border-box;
             width: 100%;
-
         }
     }
-
 }
