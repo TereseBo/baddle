@@ -18,7 +18,7 @@ To install requirements run:
 ```npm i ```  
 
 ## Environment
-The application does not require any additional sign-ups or registrations but relies on gh-pages for it's deployment.
+The application does not require any additional sign-ups or registrations but relies on react-gh-pages for it's deployment.
 
 ## Testing
 Testing has not been implemented beyond having a run command:
