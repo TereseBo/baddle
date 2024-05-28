@@ -1,6 +1,31 @@
-# Getting Started with Create React App
+# Getting Started with Baddle, the band-weaving vizualiser
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Functionality
+Welcome to Baddle. In this application you can visualise a warpfaced draft made on a backstrap heddle loom and extract the warping order. Choose a color and thread the heddle by point and click. The warping order will update automatically as the warp in the heddle is filled. To move the hedddle up or down, click the corresponding arrow on the row you wish to update. 
+
+#### [View the demonstration application here](https://teresebo.github.io/baddle/)
+
+## Getting started
+Navigate to the link above and try it out. 
+For continued development, clone the repository from gitHub and navigate to the root folder:  
+
+```git clone https://github.com/TereseBo/baddle.git```  
+
+```cd baddle```  
+
+To install requirements run:  
+
+```npm i ```  
+
+## Environment
+The application does not require any additional sign-ups or registrations but relies on gh-pages for it's deployment.
+
+## Testing
+Testing has not been implemented beyond having a run command:
+
+```npm run test```
+
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information on implementing testing.
 
 ## Available Scripts
 
@@ -8,11 +33,15 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
+Which runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
-You may also see any lint errors in the console.
+
+### `npm deploy`
+
+Will update production branch (gh-pages) with the newest changes in main. No fail-safes or checks before deploy are implemented, verify successfull deploy manually and reset if failing.
+
 
 ### `npm test`
 
@@ -39,32 +68,4 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
