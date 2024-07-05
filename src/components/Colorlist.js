@@ -2,7 +2,7 @@ import Colorcomp from "./Colorcomp"
 import { WarpContext } from "../contexts/warpContext"
 import { useContext } from "react"
 import './Colorlist.scss'
-export default function Colorlist({ label, name, onClick }) {
+export default function Colorlist() {
 
     const { warp } = useContext(WarpContext)
 

@@ -7,7 +7,8 @@ export const WarpContext = createContext()
 export function WarpProvider({ children }) {
     const [warpthreads, setWarpthreads] = useState(threads)
     const [draftheight, setDraftheight] = useState(draftRows)
-    const [warp, setWarp] = useState([new Array(warpthreads / 2).fill('', 0, warpthreads / 2), new Array(warpthreads / 2).fill('', 0, warpthreads / 2)])
+    //const [warp, setWarp] = useState([new Array(warpthreads / 2).fill('', 0, warpthreads / 2), new Array(warpthreads / 2).fill('', 0, warpthreads / 2)])
+    const [warp, setWarp] = useState([new Array(Math.ceil(warpthreads / 2)).fill('', 0, Math.ceil(warpthreads / 2)), new Array(Math.floor(warpthreads / 2)).fill('', 0, Math.floor(warpthreads / 2))])
     const [weaveArea, setWeaveArea] = useState(() => { return new Array(draftheight).fill('', 0, draftheight) })
     //TODO: Clenaup
     //Replace alla instances of warpthreads/2
@@ -15,20 +16,22 @@ export function WarpProvider({ children }) {
 
 
     useEffect(() => {
+
         setWeaveArea(new Array(draftheight).fill('', 0, draftheight))
 
     }, [draftheight])
     useEffect(() => {
 
-        setWarp(prevWarp => {
+         setWarp(prevWarp => {
+
             const lengthDiff = (warpthreads / 2) - prevWarp[0].length
 
             let newValue = []
 
             lengthDiff < 0 ?
-                newValue = [prevWarp[0].toSpliced(warpthreads / 2), prevWarp[1].toSpliced(warpthreads / 2)]
+                newValue = [prevWarp[0].toSpliced(Math.ceil(warpthreads / 2)), prevWarp[1].toSpliced(Math.floor(warpthreads / 2))]
                 :
-                newValue = [prevWarp[0].concat(new Array(lengthDiff).fill('', 0, lengthDiff)), prevWarp[1].concat(new Array(lengthDiff).fill('', 0, lengthDiff))]
+                newValue = [prevWarp[0].concat(new Array(Math.ceil(lengthDiff)).fill('', 0, Math.ceil(lengthDiff))), prevWarp[1].concat(new Array(Math.floor(lengthDiff)).fill('', 0, Math.floor(lengthDiff)))]
             return newValue
         })
 
