@@ -1,12 +1,11 @@
 @use "../style/mixins.scss" as m;
 .Preferences{
     @include m.text-box;
+    @include m.rounded-borders;
     display: flex;
     flex-direction: column;
     gap:0.5rem;
     padding: 1rem;
-
-
 }
 
 

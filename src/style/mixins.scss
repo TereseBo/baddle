@@ -57,12 +57,18 @@
 
     /* Firefox */
     input[type=number] {
+        appearance: textfield;
         -moz-appearance: textfield;
     }
 }
 
 @mixin rounded-corners{
     border-radius: 12px;
+}
+
+@mixin rounded-borders{
+    @include rounded-corners;
+    border:1px ridge v.$weave-base-color
 }
 
 @mixin text-box{
