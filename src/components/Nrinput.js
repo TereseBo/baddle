@@ -7,12 +7,10 @@ export default function Nrinput({ label, value, submit, max}) {
     const [valuestate, setValuestate]=useState(value)
     function saveChange(e){
         setValuestate(parseInt(e.target.value))
-        console.log(valuestate)
     }
     function handleSubmit(e){
         e.preventDefault()
         submit(valuestate)
-        console.log(valuestate)
     }
     return (
         <form className='Nrinput' onSubmit={handleSubmit}>

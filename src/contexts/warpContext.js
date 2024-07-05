@@ -15,25 +15,20 @@ export function WarpProvider({ children }) {
 
 
     useEffect(() => {
-        console.log('I reset weave height')
         setWeaveArea(new Array(draftheight).fill('', 0, draftheight))
 
     }, [draftheight])
     useEffect(() => {
-     
-        console.log('I re ran warp')
+
         setWarp(prevWarp => {
             const lengthDiff = (warpthreads / 2) - prevWarp[0].length
 
-            console.log('warpthreads:', warpthreads, 'arr.length', warp[0].length, 'diff:', lengthDiff)
             let newValue = []
-          
 
             lengthDiff < 0 ?
                 newValue = [prevWarp[0].toSpliced(warpthreads / 2), prevWarp[1].toSpliced(warpthreads / 2)]
                 :
                 newValue = [prevWarp[0].concat(new Array(lengthDiff).fill('', 0, lengthDiff)), prevWarp[1].concat(new Array(lengthDiff).fill('', 0, lengthDiff))]
-            console.log(newValue)
             return newValue
         })
 
