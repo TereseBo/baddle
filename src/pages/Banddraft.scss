@@ -1,13 +1,25 @@
 @use "../style/variables.scss" as v;
 @use "../style/mixins.scss" as m;
 
-.Banddraft {
+@media screen and (max-width: 900px) {
+    .Banddraft {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
 
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
+@media screen and (min-width: 901px) {
+    .Banddraft {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.Banddraft {
     gap: v.$base-space;
     padding-top: 3rem;
+
 
     .draft {
         background-color: v.$weave-base-color;

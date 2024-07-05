@@ -28,7 +28,7 @@ export default function Colorlist({ label, name, onClick }) {
             {
                 warpSequence ?
                     (<div className="color-list">
-                        <h3>{'Warp:'}</h3>
+                        <h3>{'Warp order:'}</h3>
                         {warpSequence.map((color, index) => (
                             color.color === '' ? null : <div key={color + index} className="color-item">{color.threads}<Colorcomp key={index + color.color} color={color.color} /></div>
 
