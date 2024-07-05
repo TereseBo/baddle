@@ -24,7 +24,7 @@ export function WarpProvider({ children }) {
 
          setWarp(prevWarp => {
 
-            const lengthDiff = (warpthreads / 2) - prevWarp[0].length
+            const lengthDiff = Math.ceil((warpthreads / 2)) - prevWarp[0].length
 
             let newValue = []
 
